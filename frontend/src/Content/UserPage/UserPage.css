@@ -1,0 +1,25 @@
+.User_SideBar
+{
+    background-color: lightgray;
+    display: inline-block;
+    width: 30%;
+}
+
+.User_SideBar:hover
+{
+    display: none;
+}
+
+.User_SetBar
+{
+    background-color: lightblue;
+    display: inline-block;
+    width: 70%;
+}
+
+.User_SetBar:hover
+{
+    width: 100%;
+}
+
+
