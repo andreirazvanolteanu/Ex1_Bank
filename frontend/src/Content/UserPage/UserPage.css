@@ -1,25 +1,25 @@
 .User_SideBar
 {
-    background-color: lightgray;
+   border-right: 1px solid black;
     display: inline-block;
-    width: 30%;
-}
-
-.User_SideBar:hover
-{
-    display: none;
+    width: 25%;
+    position: absolute;
+    height: 100%;
+    left: 0;
 }
 
 .User_SetBar
 {
-    background-color: lightblue;
+    background-color: rgb(3, 3, 207);
     display: inline-block;
-    width: 70%;
+    width: 75%;
+    padding: 1em;
+    color: white;
+    position: absolute;
+    left: 25%;
 }
-
-.User_SetBar:hover
-{
-    width: 100%;
+.titleBar{
+font-size: xx-large;
 }
 
 

@@ -4,33 +4,25 @@ import './SignUp.css';
 function SignUp() {
   return (
     <div className="SignUp">
-        <h1> Sign Up</h1>
-          <form action="/home">
-
-                <label for="fname">First Name: </label>
-                    <input type="text" id="fname" name="fname" placeholder='First Name'/> 
+        <h1 id='titleSignUp'><em>Real World App</em></h1>
+        <p> Sign Up</p>
+          <form action="/">
+                    <input type="text" id="fname" name="fname" className='inputSignUp' placeholder='First Name*'/> 
                 <br/><br/>
 
-                <label for="fname">Last Name: </label>
-                    <input type="text" id="fname" name="fname" placeholder='Last Name* '/> 
+                    <input type="text" id="fname" name="fname" className='inputSignUp' placeholder='Last Name* '/> 
                 <br/><br/>
 
-
-
-                <label for="fname">Username: </label>
-                    <input type="text" id="fname" name="fname" placeholder='Username'/> 
+                    <input type="text" id="fname" name="fname" className='inputSignUp' placeholder='Username*'/> 
                 <br/><br/>
 
-
-                <label for="lpassword">Password: </label>
-                    <input type="password" id="lpassword" name="lpassword" placeholder='Password'/>
+                    <input type="password" id="lpassword" name="lpassword" className='inputSignUp' placeholder='Password*'/>
                 <br/><br/>
 
-                <label for="lpassword">Confirm Password: </label>
-                    <input type="password" id="lpassword" name="lpassword" placeholder='Confirm Password' />
+                    <input type="password" id="lpassword" name="lpassword" className='inputSignUp' placeholder='Confirm Password*' />
                 <br/><br/>
 
-                <input type="submit" value="Submit" placeholder='Sign Up' />
+                <button type="submit" value="Submit" id='btnSignUp'>SIGN UP</button> 
           </form>
 
     </div>

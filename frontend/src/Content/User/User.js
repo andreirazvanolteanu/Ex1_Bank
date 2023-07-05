@@ -1,5 +1,4 @@
 import './User.css';
-import funny from "../../Img/IamRich.png"
 import axios from "axios";
 import React from "react";
 
@@ -20,22 +19,52 @@ function User() {
     });
     */
 
-  fetch(baseURL)
-  .then(response => console.log(response))
-  .then(data => console.log(data));
+    fetch(baseURL, {
+
+      headers : {
+
+        'Content-Type': 'application/json',
+
+        'Accept': 'application/json'
+
+       }}
+
+       )
+
+       .then(function(response){
+
+        console.log(response)
+
+        return response.json();
+
+      })
+
+      .then(function(myJson) {
+
+        console.log(myJson);
+
+      });
 
   console.log(baseURL);
 
   return (
     <div className="User">
-      <h1>User </h1>
 
       <div className='Card'>
-        <img src={funny} alt="Avatar" style={{width:"100px" }}/>
-        <div className='Container'>
-            <h4> <b> Jonh Doe </b></h4>
-            <p> Fresh man Engineer </p>
+        <p id='userSettingsTitle'>User Settings</p>
 
+        <div className='Container'>
+        <form action="/">
+            <input type='text' className='userSettingsInput' placeholder='Edgar'/>
+            <br/>
+            <input type='text' className='userSettingsInput' placeholder='Jonhs'/>
+            <br/>
+            <input type='text' className='userSettingsInput' placeholder='Norene39@yahoo.com'/>
+            <br/>
+            <input type='text' className='userSettingsInput' placeholder=' 625-316-9882'/>
+            <br/>
+             <button type='submit' className='userSettingsBtn'>SAVE</button>
+             </form>
         </div>
 
 

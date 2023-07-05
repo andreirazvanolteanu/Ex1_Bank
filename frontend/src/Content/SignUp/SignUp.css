@@ -1,0 +1,22 @@
+#titleSignUp{
+    color: rgb(3, 3, 207);
+    margin-top: 2em;
+}
+.inputSignUp{
+    width: 20%;
+    padding: 0.7em;
+    border-radius: 5px;
+}
+.inputSignUp:focus{
+    outline: 2px solid rgb(3, 3, 207);
+}
+#btnSignUp{
+    color: white;
+    background-color: rgb(3, 3, 207);
+    border-radius: 5px;
+    width: 21%;
+    padding: 0.7em;
+}
+p{
+    font-size: larger;
+}
