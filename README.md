@@ -1,7 +1,4 @@
 # Ex1_Bank
 
-This is the a merge into main Branch
-Here we hope it work
-
-
-Stage 2
+We create a backEnd using SprinfBoot and MySql.
+We install MySQL Workbench and store everything on our computer
