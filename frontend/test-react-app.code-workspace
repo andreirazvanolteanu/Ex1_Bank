@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "test-react-app",
+			"path": "../../react_test/test-react-app"
+		},
+		{
+			"name": "html_css_Test",
+			"path": "../../html_css_Test"
+		},
+		{
+			"path": "../../basicJavascriptExercise/basicJavascriptExercise"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
