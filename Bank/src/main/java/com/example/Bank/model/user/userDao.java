@@ -13,8 +13,9 @@ public class userDao {
     @Autowired
     private userRepository repository;
 
-    public void save(user pT) {
+    public user save(user pT) {
         repository.save(pT);
+        return pT;
     }
 
     public List<user> getAlluser(){
@@ -24,8 +25,8 @@ public class userDao {
         return userX;
     }
 
-    public void delete(user pT)
+    public void delete(int pT_id)
     {
-        repository.delete(pT);
+        repository.deleteById(pT_id);
     }
 }

@@ -18,12 +18,19 @@ class BankApplicationTests {
 	void adduserTest() {
 		user pT = new user();
 //pT.setId(2);
-		pT.setFirstName("Flaunder" );
-		pT.setLastName("The Fish");
-		pT.setUsername("Flaunder1");
-		pT.setPhone("UnderTheSea");
+		pT.setFirstName("Bat" );
+		pT.setLastName("man");
+		pT.setUsername("Bruce Wayne");
+		pT.setPhone("I_AM_BATMAN");
 		userDao.save(pT);
 
 	}
+	@Test
+	void DeleteuserTest() {
+		int pT = 7;
+		userDao.delete(pT);
+
+	}
+
 
 }
