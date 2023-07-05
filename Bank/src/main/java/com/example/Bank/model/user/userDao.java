@@ -1,4 +1,5 @@
 package com.example.Bank.model.user;
+import com.example.Bank.model.transaction.transaction;
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
@@ -16,6 +17,11 @@ public class userDao {
     public user save(user pT) {
         repository.save(pT);
         return pT;
+    }
+
+    public user getuser(int pT_id){
+        user pR = repository.findById(pT_id).get();
+        return pR;
     }
 
     public List<user> getAlluser(){

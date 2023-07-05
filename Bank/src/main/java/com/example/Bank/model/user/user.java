@@ -20,6 +20,8 @@ public class user {
 
     private String phone;
 
+    private String password;
+
     public void setId(int id) {
         this.id = id;
     }
@@ -38,6 +40,9 @@ public class user {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {
@@ -58,5 +63,9 @@ public class user {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
