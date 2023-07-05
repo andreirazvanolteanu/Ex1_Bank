@@ -4,11 +4,11 @@
     /* Add shadows to create the "card" effect */
     width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin-left: 20%;
+    margin-left: 30%;
     transition: 0.3s;
-  
+    padding-top: 5%;
   }
-  
+
   
   /* On mouse-over, add a deeper shadow */
   
@@ -26,15 +26,22 @@
     padding: 2px 16px;
   
   }
-
+h2{
+  color: rgb(3, 3, 207);
+}
+h5{
+  color:rgb(3, 3, 207);
+}
   .buttonD{
-    background-color: lightgray;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 5px 15px;
     margin: 5px;
   }
   .buttonC{
-    background-color: lightblue;
-    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(3, 3, 207);
+    color: white;
+    padding: 5px 15px;
     margin: 5px;
 
   }

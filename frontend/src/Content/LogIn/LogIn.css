@@ -1,0 +1,22 @@
+#fname{
+    width: 20%;
+    padding: 0.7em;
+    border-radius: 5px;
+
+}
+#lpassword{
+    width: 20%;
+    padding: 0.7em;
+    border-radius: 5px;
+}
+ #btnLogin{
+    color: white;
+    background-color: rgb(3, 3, 207);
+    border-radius: 5px;
+    width: 21%;
+    padding: 0.7em;
+ }
+ .inputLogin:focus{
+    outline: 2px solid rgb(3, 3, 207);
+}
+ 

@@ -1,17 +1,18 @@
 import './Bank.css';
+import UserPage from '../UserPage/UserPage';
 
 function Bank() {
   return (
     <div className="Bank">
-       <h1>Bank </h1>
-
+<UserPage></UserPage>
 <div className='Card'>
   <div className='Container'>
-      <h2> <b>  Bank Account </b></h2>
+  <form action="/">
+      <h2>   Bank Accounts</h2>
       <h5>John Doe</h5>
-      <button type='button'className='buttonC'> Create</button>
-      <button type='button'className='buttonD'> Delete</button>
-
+      <button type='submit'className='buttonC'> CREATE</button>
+      <button type='button'className='buttonD'> DELETE</button>
+</form>
 
   </div>
 

@@ -17,12 +17,26 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
-
+#userSettingsTitle{
+  color:rgb(3, 3, 207);
+}
 
 /* Add some padding inside the card container */
 
 .Container {
-
   padding: 2px 16px;
-
+}
+.User{
+  margin-top: 2em;
+}
+.userSettingsInput{
+  margin-bottom: 1em;
+  
+}
+.userSettingsBtn{
+  background-color: rgb(3, 3, 207);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 2em;
 }

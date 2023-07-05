@@ -3,20 +3,17 @@ import './LogIn.css';
 function LogIn() {
   return (
     <div className="LogIn">
-       <h1> LogIn </h1>
+      <h1 id='titleSignUp'><em>Real World App</em></h1>
+      <p> Login</p>
 
-       <form action="/home">
+       <form action="/">
 
-          <label for="fname">Username: </label>
-              <input type="text" id="fname" name="fname" /> 
+              <input type="text" id="fname" className="inputLogin" name="fname" placeholder='Username*'/> 
+          <br/><br/>
+              <input type="password" id="lpassword" className="inputLogin" name="lpassword" placeholder='Password*'/>
           <br/><br/>
 
-
-          <label for="lpassword">Password: </label>
-              <input type="password" id="lpassword" name="lpassword" />
-          <br/><br/>
-
-          <input type="submit" value="Submit" />
+          <button id='btnLogin' type="submit" value="Submit" >Login</button>
         </form>
 
 

@@ -6,7 +6,10 @@ function Home() {
     <div className="Home">
       <h1>Home </h1>
 
-      <a href="/SignUp"> SIgnUp </a>
+      <a href="/SignUp"> SignUp </a>
+      <br /><br />
+
+      <a href="/LogIn"> LogIn </a>
       <br /><br />
 
       <a href="/404"> NoPage </a>
@@ -21,13 +24,10 @@ function Home() {
       <a href="/Bank"> Bank </a>
       <br /><br />
 
-      <a href="/LogIn"> LogIn </a>
-      <br /><br />
-
       <a href="/Transaction"> Transaction </a>
       <br /><br />
 
-      <a href="/TransactionD"> TransactionD </a>
+      <a href="/TransactionD"> Transaction Details </a>
       <br /><br />
       
 

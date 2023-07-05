@@ -1,4 +1,9 @@
-
+.transactionDTitle{
+  color: rgb(3, 3, 207);
+  font-size: x-large;
+  width: 30%;
+  padding-top: 1em;
+}
 .Transaction_Card {
 
     /* Add shadows to create the "card" effect */
@@ -9,6 +14,11 @@
   
   }
   
+  .icon{
+    color: rgb(3, 3, 207);
+    font-size: x-large;
+    margin-left: 1em;
+  }
   
   /* On mouse-over, add a deeper shadow */
   
@@ -22,7 +32,10 @@
   /* Add some padding inside the card container */
   
   .TransactionD_Container {
-  
+  width: 40%;
     padding: 2px 16px;
   
+  }
+  textarea{
+    padding: 0.7em;
   }
