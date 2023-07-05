@@ -2,9 +2,9 @@ import express from "express";
 
 const app = express()
 
-app.get(" /", (req, res) => {})
+app.get("/", (req, res) => {})
 
-app.get(" /users", (req, res) => {
+app.get("/users", (req, res) => {
     res.send([{id:1, name: "BOB", age: 2}])
 })
 

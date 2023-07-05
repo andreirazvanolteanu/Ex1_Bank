@@ -19,7 +19,7 @@ function App() {
   React.useEffect(() => {
     
     axios.get("/api/users"
-          ).then(res => console.log(res.data))
+          ).then(res => {setUsers(res.data)})
           .catch(err => console.log(err))
     });
  
