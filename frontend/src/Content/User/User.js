@@ -1,30 +1,46 @@
 import './User.css';
 import funny from "../../Img/IamRich.png"
 import axios from "axios";
-import React from "react";
+import React,{useState,useEffect} from 'react';
 
-
+//const baseURL = "http://localhost:8090/user/get-all";
 const baseURL = "/user/get-all";
-axios.defaults.withCredentials = true;
+//axios.defaults.withCredentials = true;
 
 function User() {
 
   
 
   /*
-   React.useEffect(() => {
+    React.useEffect(() => {
     axios.defaults.withCredentials = true;
     axios.get(baseURL
           ).then(res => console.log(res.data))
           .catch(err => console.log(err))
     });
+   
+fetch(baseURL, )
+    .then(response => console.log(response.data))
+    .then(data => console.log(data));
+
+      
     */
+    
+    fetch(baseURL, {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }}
+       )
+       .then(function(response){
+        console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+      });
 
-  fetch(baseURL)
-  .then(response => console.log(response))
-  .then(data => console.log(data));
 
-  console.log(baseURL);
 
   return (
     <div className="User">
