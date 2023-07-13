@@ -4,6 +4,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import javax.xml.stream.events.Comment;
 import java.sql.Date;
 
 //import javax.persistence.Entity;
@@ -17,6 +18,13 @@ public class transaction {
 
     private String From_Name;
     private String To_Name;
+
+    private double money_count;
+
+    private int Likes;
+
+    private int comments;
+
 
     public void setId(int id) {
         this.id = id;
@@ -34,6 +42,12 @@ public class transaction {
         To_Name = to_Name;
     }
 
+    public void setMoney_count(double money_count) {this.money_count = money_count;}
+
+    public void setLikes(int likes) {Likes = likes;}
+
+    public void setComments(int comments) {this.comments = comments;}
+
     public int getId() {
         return id;
     }
@@ -49,4 +63,14 @@ public class transaction {
     public String getTo_Name() {
         return To_Name;
     }
+
+    public double getMoney_count() {return money_count;}
+
+    public int getLikes() {return Likes;}
+
+    public int getComments() {return comments;}
+
+    public void incr_Likes() {  Likes = Likes+1;  }
+
+    public void incr_Comments() { comments=comments+1; }
 }

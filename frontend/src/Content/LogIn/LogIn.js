@@ -63,7 +63,8 @@ function LogIn({ setToken }) {
             {
               console.log("User Exist");
               setId(myJson[i].id)
-              setToken(id)
+              localStorage.setItem("Token", JSON.stringify(myJson[i].id));
+
               break;
             }
         }

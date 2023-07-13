@@ -59,6 +59,9 @@ class BankApplicationTests {
 		pT0.setNumberT("APp098");
 		pT0.setFrom_Name("Flaunder");
 		pT0.setTo_Name("Bat");
+		pT0.setMoney_count(-400);
+		pT0.setComments(0);
+		pT0.setLikes(0);
 		tran_Dao.save(pT0);
 	}
 

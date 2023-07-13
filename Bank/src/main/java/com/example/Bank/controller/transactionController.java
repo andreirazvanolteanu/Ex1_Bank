@@ -5,10 +5,7 @@ import com.example.Bank.model.transaction.transactionDao;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class transactionController {
@@ -35,6 +32,18 @@ public class transactionController {
         return ResponseEntity.ok("Project with Id = {id} deleted");
         //Ok($"Project with Id = {id} deleted");
     }
+
+    @PutMapping("transaction/likes/{id}")
+    public ResponseEntity<transaction> updateLikes(@PathVariable int id) {
+        transaction tran = tran_Dao.gettransaction(id);
+        //.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
+
+        tran.incr_Likes();
+        tran_Dao.save(tran);
+
+        return ResponseEntity.ok(tran);
+    }
+
 
 
 }

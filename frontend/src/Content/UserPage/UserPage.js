@@ -31,10 +31,8 @@ function UserPage() {
       //console.log(myJson);
       for (let i=0; i < myJson.length; i++)
       {
-          //console.log(i + ": " + myJson[i].username + " and " + myJson[i].password );
           if((myJson[i].id == data.id)  )
           {
-            //console.log("User Exist");
             setData( prevState => ( {
               "firstName": myJson[i].firstName,
               "lastName": myJson[i].lastName,
@@ -57,7 +55,7 @@ function UserPage() {
       <div className='User_SideBar'>
             <p> {data.firstName} {data.lastName}</p>
             <p> {data.username} </p>
-            <h3>$1,678.21</h3>
+            <h3>$1,000.00</h3>
             <p>Account Balance</p>
             <div className='links'>
        <a href='/'>Home</a>
