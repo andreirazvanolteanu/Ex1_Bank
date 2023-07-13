@@ -4,7 +4,7 @@ import React from "react";
 
 
 const baseURL = "/user/get-all";
-axios.defaults.withCredentials = true;
+//axios.defaults.withCredentials = true;
 
 function User() {
 
