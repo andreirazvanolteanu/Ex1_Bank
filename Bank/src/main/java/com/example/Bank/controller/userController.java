@@ -42,6 +42,7 @@ public class userController {
 
         up_user.setFirstName(userDetails.getFirstName());
         up_user.setLastName(userDetails.getLastName());
+        up_user.setUsername(userDetails.getUsername());
         up_user.setPhone(userDetails.getPhone());
 
         userDao.save(up_user);

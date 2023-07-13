@@ -12,9 +12,21 @@ import LogIn from './Content/LogIn/LogIn';
 import SignUp from './Content/SignUp/SignUp';
 import Transaction from './Content/Transaction/Transaction';
 import TransactionDetail from './Content/TransactionDetail/TransactionDetail';
+import useToken from './Content/auth-tu/useToken';
+
+
 
 
 function App() {
+
+  const { token, setToken } = useToken();
+
+  /*
+  if(!token) {
+    return <LogIn setToken={setToken} />
+  }
+  */
+
   return (
     <div className="App">
        <BrowserRouter>
@@ -24,7 +36,7 @@ function App() {
           <Route path="/User" element={<User />} />
           <Route path="/UserPage" element={<UserPage />} />
           <Route path="/Bank" element={<Bank />} />
-          <Route path="/LogIn" element={<LogIn />} />
+          <Route path="/LogIn" element={<LogIn setToken={setToken} />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Transaction" element={<Transaction />} />
           <Route path="/TransactionD" element={<TransactionDetail />} />
