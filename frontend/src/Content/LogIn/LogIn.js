@@ -22,7 +22,7 @@ async function loginUser(credentials) {
 
 
 
-function LogIn({ setToken }) {
+function LogIn() {
 
   const initialvalues = {
     "username": "",
@@ -80,7 +80,7 @@ function LogIn({ setToken }) {
   const handleClick2 =  (e) => {
     e.preventDefault();
     console.log(id);
-    console.log(setToken);
+    console.log();
   }
 
 

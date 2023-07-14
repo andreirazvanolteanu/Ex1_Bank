@@ -3,6 +3,7 @@ import { BiLike } from 'react-icons/bi';
 import {MdComment} from 'react-icons/md';
 import axios from "axios";
 import { useState, React } from "react";
+import UserPage from '../UserPage/UserPage';
 
 const baseURL = "/transaction/get-all";
 
@@ -19,7 +20,6 @@ function Transaction() {
     "from_Name": ""
   };
   const [data, setData] = useState(initialvalues);
-  
 
   fetch(baseURL, {
     headers : {
@@ -58,6 +58,7 @@ function Transaction() {
 
   return (
     <div className="Transaction">
+      <UserPage></UserPage>
       <div className='TransactionContainer'>
             <div className='TransactionControl'>
           
@@ -82,7 +83,8 @@ function Transaction() {
 
             
             <div className='Transaction_Users'>
-              <div className='Transaction_Card'>
+          
+              <div className='Transaction_Card' >
                   <div className='Transaction_Card_Container'>
                   <p>Personal</p>
                       <p> <b> 
@@ -95,8 +97,9 @@ function Transaction() {
 
 
               </div>
+
             </div>
-        
+
         
       </div>
     </div>

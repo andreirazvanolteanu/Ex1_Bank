@@ -1,6 +1,7 @@
 import './User.css';
 import axios from "axios";
 import { useState, React } from "react";
+import UserPage from '../UserPage/UserPage';
 
 
 const baseURL = "/user/get-all";
@@ -8,7 +9,7 @@ axios.defaults.withCredentials = true;
 
 function User() {
   const initialvalues = {
-    "id": "8",
+    "id": "9",
     "firstName": "",
     "lastName": "",
     "username": "",
@@ -55,32 +56,59 @@ function User() {
         console.log(err.message);
       } 
 
-
-
       
     };
+
+    fetch(baseURL, {
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }}
+       )
+       .then(function(response){console.log(response)
+          return response.json();
+      })
   
+      .then(function(myJson) {
+        console.log(myJson);
+        for (let i=0; i < myJson.length; i++)
+        {
+            if((myJson[i].id == data.id)  )
+            {
+              setData( prevState => ( {
+                "firstName": myJson[i].firstName,
+                "lastName": myJson[i].lastName,
+                "username": myJson[i].username,
+                "phone": myJson[i].phone
+              }))
+              console.log("pa"+data)
+              break;
+            }
+        }
   
+      });
+  
+
 
   return (
     <div className="User">
-
+      <UserPage></UserPage>
       <div className='Card'>
         <p id='userSettingsTitle'>User Settings</p>
 
         <div className='Container'>
         <form action="/">
             <input type='text' className='userSettingsInput' 
-            name = "firstName" onChange={handleChange}  placeholder='Edgar'/>
+            name = "firstName" onChange={handleChange} value={data.firstName}/>
             <br/>
             <input type='text' className='userSettingsInput' name = "lastName" onChange={handleChange}
-            placeholder='Jonhs'/>
+            value={data.lastName}/>
             <br/>
             <input type='text' className='userSettingsInput' name = "username" onChange={handleChange} 
-            placeholder='Norene39@yahoo.com'/>
+            value={data.username}/>
             <br/>
             <input type='text' className='userSettingsInput' name = "phone" onChange={handleChange} 
-            placeholder=' 625-316-9882'/>
+           value={data.phone}/>
             <br/>
              <button type='submit' className='userSettingsBtn' onClick={handleClick} >SAVE</button>
              </form>
