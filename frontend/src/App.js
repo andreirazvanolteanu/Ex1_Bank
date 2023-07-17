@@ -23,22 +23,24 @@ function App() {
   const [token, setToken] = useState(() => {
     // getting stored value
     const tok = localStorage.getItem("Token");
-    console.log("kk" + tok);
-    if (tok == "")
-    {
-      console.log("kk2" );
-      return null;
-    }
-    else
-    {
-      const initialValue = JSON.parse(tok);
-      return initialValue || "";
-    }
+    
     
   });
 
 
   /*
+    console.log("kk" + tok);
+        if (tok == "")
+        {
+          console.log("kk2" );
+          return null;
+        }
+        else
+        {
+          const initialValue = JSON.parse(tok);
+          return initialValue || "";
+        }
+
   if(!token) {
     return <LogIn  />
   }

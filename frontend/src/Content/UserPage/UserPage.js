@@ -17,6 +17,8 @@ function UserPage() {
     "password": ""
   };
   const [data, setData] = useState(initialvalues);
+  const [Id, SetId] = useState(localStorage.getItem("Token"));
+  const [Check2, setCheck2] = useState(false)
   
   fetch(baseURL, {
     headers : {
@@ -32,7 +34,7 @@ function UserPage() {
       //console.log(myJson);
       for (let i=0; i < myJson.length; i++)
       {
-          if((myJson[i].id == data.id)  )
+          if((myJson[i].id == Id)  )
           {
             setData( prevState => ( {
               "firstName": myJson[i].firstName,
@@ -47,15 +49,28 @@ function UserPage() {
 
     });
 
+    const handleClick =  (e) => {
+      e.preventDefault();
+      if (Check2)
+      {
+        setCheck2(false);
+      }
+      else
+      {
+        setCheck2(true)
+      }
+
+    }
+
   return (
     <div className="UserPage">
-      <input type='checkbox' id='check' />
-      <label for='check'>
-      
-      <i class="fas fa-times" id='cancel'>&times;</i>
+      <input type='checkbox' id="check" checked={Check2} onClick={handleClick} name="UserPage_SideBar"/>
+     
+      <label for="check">
+        <i class="fas fa-times" id='cancel'>&times;</i>
       </label>
   
-      <div className='User_SideBar'>
+      <div className='User_SideBar' >
             <p id='firstname'> {data.firstName} {data.lastName}</p>
             <p id='username'> {data.username} </p>
             <h3>$1,000.00</h3>
@@ -74,8 +89,10 @@ function UserPage() {
       <i className='fas fa-bars' id='btn1'>☰</i>
       </label>
             <em className='titleBar'>Real World App</em>
-            <button className='newBtn'>$ NEW</button>
+            <button className='newBtn' onClick={handleClick} name="UserPage_SideBar2" >$ NEW</button>
       </div>
+
+      
 
     </div>
   );

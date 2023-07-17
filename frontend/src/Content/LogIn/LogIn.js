@@ -81,15 +81,15 @@ function LogIn() {
 
        <form action="/">
 
-              <input type="text" id="fname" className="inputLogin" name = "username" 
+              <input type="text" id="Login_username" className="inputLogin" name = "username" 
               onChange={handleChange}  placeholder='Username*'/> 
           <br/><br/>
-              <input type="password" id="lpassword" className="inputLogin" name = "password" 
+              <input type="password" id="Login_lpassword" className="inputLogin" name = "password" 
               onChange={handleChange}  placeholder='Password*'/>
           <br/><br/>
 
           <button id='btnLogin' type="submit" onClick={handleClick} value="Submit" >Login</button>
-          <button id='btnLogin' type="submit2" onClick={handleClick2} value="Submit" >Verifier</button>
+          {/* <button id='btnLogin2' type="submit2" onClick={handleClick2} value="Submit" >Verifier</button> */}
         </form>
 
 

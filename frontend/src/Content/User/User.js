@@ -17,6 +17,7 @@ function User() {
     "password": ""
   };
   const [data, setData] = useState(initialvalues);
+  const [Id, SetId] = useState(localStorage.getItem("Token"));
 
   
 
@@ -30,7 +31,7 @@ function User() {
       e.preventDefault();
       console.log(data);
 
-      var bareURL_PUT = "/" + data.id;
+      var bareURL_PUT = "/" + Id;
 
       try {
       fetch(bareURL_PUT, {
@@ -73,7 +74,7 @@ function User() {
         console.log(myJson);
         for (let i=0; i < myJson.length; i++)
         {
-            if((myJson[i].id == data.id)  )
+            if((myJson[i].id == Id)  )
             {
               setData( prevState => ( {
                 "firstName": myJson[i].firstName,

@@ -18,6 +18,7 @@ function TransactionDetail() {
     "from_Name": ""
   };
   const [data, setData] = useState(initialvalues);
+  const [Id, SetId] = useState(localStorage.getItem("Token"));
   
   fetch(baseURL, {
     headers : {
@@ -34,7 +35,7 @@ function TransactionDetail() {
       for (let i=0; i < myJson.length; i++)
       {
         //console.log(i + ": " + myJson[i].username + " and " + myJson[i].password );
-          if((myJson[i].id == data.id)  )
+          if((myJson[i].id == Id)  )
           {
             //console.log("User Exist");
             setData( prevState => ( {
@@ -91,7 +92,7 @@ function TransactionDetail() {
           <div className='TransactionD_Container'> 
               <p> <b> {data.from_Name} </b> paid <b> {data.to_Name} </b> </p>
               <p> Payment: {data.numberT} </p>
-              <p id='likes'> {data.likes} <BiLike className='icon' onClick ={handleLinkes} /> </p>
+              <p id='likes' name="transD_L"> {data.likes} <BiLike className='icon' onClick ={handleLinkes} name="transD_Like" /> </p>
               <p id='comments'> {data.comments} <MdComment className='comment'/> </p>
               <textarea name='comment' form='usrform' placeholder='Write a comment...' rows={1} />
              

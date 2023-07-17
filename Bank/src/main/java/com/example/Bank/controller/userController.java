@@ -31,7 +31,7 @@ public class userController {
     @PostMapping("/user/delete")
     public ResponseEntity delete(@RequestBody int id_X) {
          userDao.delete(id_X);
-         return ResponseEntity.ok("Project with Id = {id} deleted");
+         return ResponseEntity.ok("Project with Id =" + id_X + " eleted");
         //Ok($"Project with Id = {id} deleted");
     }
 
