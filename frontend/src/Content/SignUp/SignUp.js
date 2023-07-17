@@ -30,6 +30,7 @@ function SignUp() {
         headers: {
           'Content-Type': 'application/json',
       },
+            
             body: JSON.stringify(data),
 
       });
@@ -104,27 +105,27 @@ function SignUp() {
         <h1 id='titleSignUp'><em>Real World App</em></h1>
         <p> Sign Up</p>
           <form action="/">
-                    <input type="text"  name = "firstName" onChange={handleChange}  className='inputSignUp' placeholder='First Name*'/> 
+                    <input type="text" id="signup_firstName" name = "firstName" onChange={handleChange}  className='inputSignUp' placeholder='First Name*'/> 
                 <br/><br/>
 
-                    <input type="text" id="fname" name = "lastName" onChange={handleChange} className='inputSignUp' placeholder='Last Name* '/> 
+                    <input type="text" id="signup_lastName" name = "lastName" onChange={handleChange} className='inputSignUp' placeholder='Last Name* '/> 
                 <br/><br/>
 
-                    <input type="text" id="fname" name = "username" onChange={handleChange} className='inputSignUp' placeholder='Username*'/> 
+                    <input type="text" id="signup_username" name = "username" onChange={handleChange} className='inputSignUp' placeholder='Username*'/> 
                 <br/><br/>
 
-                <input type="text" id="fname" name = "phone" onChange={handleChange} className='inputSignUp' placeholder='Phone*'/>
+                <input type="text" id="signup_phone" name = "phone" onChange={handleChange} className='inputSignUp' placeholder='Phone*'/>
                 <br/><br/>
 
-                    <input type="password" id="lpassword" name = "password" onChange={handleChange} className='inputSignUp' placeholder='Password*'/>
+                    <input type="password" id="signup_lpassword" name = "password" onChange={handleChange} className='inputSignUp' placeholder='Password*'/>
                 <br/><br/>
 
-                    <input type="password" id="lpassword" name = "password" onChange={handleChange} className='inputSignUp' placeholder='Confirm Password*' />
+                    <input type="password" id="signup_lpassword2" name = "password" onChange={handleChange} className='inputSignUp' placeholder='Confirm Password*' />
                 <br/><br/>
 
-                <button type="submit" value="Submit" onClick={handleClickPost}  id='btnSignUp'>SIGN UP</button> 
+                <button type="submit" value="Submit" name = "signup_submit" onClick={handleClickPost}  id='btnSignUp'>SIGN UP</button> 
           </form>
-
+          
     </div>
   );
 }
